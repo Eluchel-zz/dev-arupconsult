@@ -1,0 +1,6 @@
+name = "Rhythmyx Migrate"
+description = "Module to migrate data from Rhythmyx to Drupal"
+package = "Rhythmyx Migration Packages"
+core = 7.x
+version = "7.x-1.0"
+dependencies[] = migrate
