@@ -3,6 +3,7 @@ description = A two-column, standards-based layout.
 core = 7.x
 
 engine = phptemplate
+stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/media.css
 stylesheets[print][] = css/print.css

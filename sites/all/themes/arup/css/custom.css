@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+#site-title {
+	padding-top: 27px;
+}
+
+.admin-menu #overlay-container {
+	margin-top: 15px;
+}
+
+.admin-menu-with-shortcuts #overlay-container {
+	margin-top: 50px;
+}
