@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="975df771-3ebd-479a-a788-164b868c574b" name="Default" comment="" />
+    <list default="true" id="975df771-3ebd-479a-a788-164b868c574b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/arup/.sass-cache/ee32ddef17804691253ec0f635e8b7bf98ffcde9/custom.scssc" afterPath="$PROJECT_DIR$/sites/all/themes/arup/.sass-cache/ee32ddef17804691253ec0f635e8b7bf98ffcde9/custom.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/arup/css/custom.css.map" afterPath="$PROJECT_DIR$/sites/all/themes/arup/css/custom.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/arup/css/custom.css" afterPath="$PROJECT_DIR$/sites/all/themes/arup/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/arup/scss/custom.scss" afterPath="$PROJECT_DIR$/sites/all/themes/arup/scss/custom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="dev-arupconsult.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,8 +36,8 @@
           <file leaf-file-name="subscribe.module" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sites/all/modules/subscribe/subscribe.module">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21624589">
-                  <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.04829857">
+                  <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
                   <folding>
                     <element signature="e#8#97#0#PHP" expanded="true" />
                   </folding>
@@ -80,6 +86,7 @@
         <option value="$PROJECT_DIR$/sites/all/modules/subscribe/subscribe.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/subscribe/subscribe.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/subscribe/subscribe.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css" />
       </list>
     </option>
   </component>
@@ -281,6 +288,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev-arupconsult" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev-arupconsult" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev-arupconsult" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev-arupconsult" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_menu_toolbar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -354,7 +417,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436929054659</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated the styling">
+      <created>1436984504050</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1436984504050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -416,7 +485,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added an install file" />
     <MESSAGE value="updated to come in line with Drupal best coding practices" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated to come in line with Drupal best coding practices" />
+    <MESSAGE value="updated the styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,10 +641,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29028815">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/subscribe/subscribe.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21624589">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.04829857">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="e#8#97#0#PHP" expanded="true" />
           </folding>

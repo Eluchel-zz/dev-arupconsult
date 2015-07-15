@@ -34,4 +34,17 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#b70000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
+.content .view.view-publish-bulk-update .confirmation .form-actions #edit-submit {
+  background-color: #cc0000;
+  border-radius: 200px;
+  background-image: none;
+  padding: 100px 85px; }
+.content .view.view-publish-bulk-update .views-row {
+  padding-top: 5px; }
+  .content .view.view-publish-bulk-update .views-row .views-field-views-bulk-operations {
+    float: left;
+    margin-right: 3px; }
+    .content .view.view-publish-bulk-update .views-row .views-field-views-bulk-operations .form-type-checkbox {
+      display: inline; }
+
 /*# sourceMappingURL=custom.css.map */

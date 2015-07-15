@@ -12,6 +12,7 @@
 	margin-top: 50px;
 }
 
+
 #block-feedback-form {
 	h2 {
 		margin: 0;	
@@ -32,5 +33,27 @@
 		background: radial-gradient(ellipse at center,  #cc0000 0%,#c00000 44%,#b70000 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#b70000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	
+	}
+}
+.content  {	
+	.view.view-publish-bulk-update {
+		 .confirmation {
+			 .form-actions #edit-submit {
+				background-color: #cc0000;
+				border-radius: 200px;
+				background-image: none;
+				padding: 100px 85px;
+			 }
+		 }
+		 .views-row {
+			 .views-field-views-bulk-operations {
+				 .form-type-checkbox {
+					display: inline; 
+				 }
+				float: left; 
+				margin-right: 3px;
+			 }
+			 padding-top: 5px;
+		 }
 	}
 }
