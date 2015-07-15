@@ -91,7 +91,7 @@ class BiblioEntrezPubmedArticle
         }
 
         $this->biblio = array(
-        'title'           => (string)$this->article->Article->ArticleTitle,
+        'title'           => (string)$this->article->Article->ArticleTitle . t(' PubMed'),
         'biblio_citekey'  => $citekey,
         'biblio_pubmed_id' => $this->id,
         'biblio_pubmed_md5' => $this->md5,
