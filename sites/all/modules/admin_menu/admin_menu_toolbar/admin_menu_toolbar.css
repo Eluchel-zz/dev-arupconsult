@@ -11,10 +11,10 @@
 
 /* Adjust margin/height */
 html body.admin-menu {
-  margin-top: 45px !important;
+  margin-top: 20px !important;
 }
 html body.admin-menu-with-shortcuts {
-  margin-top: 81px !important;
+  margin-top: 45px !important;
 }
 /* Displace the core Toolbar, if concurrently output. */
 body div#toolbar.toolbar {
