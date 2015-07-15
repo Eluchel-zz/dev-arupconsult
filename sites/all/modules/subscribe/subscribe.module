@@ -8,7 +8,7 @@
    * Implements hook_help().
    */
   function subscribe_help($path, $arg) {
-    switch($path) {
+    switch ($path) {
       case 'admin/help#subscribe':{
         $ret_val = '<h3>' . t('About') . '</h3>';
         $ret_val .= '<p>' . t('The Subscribe module allows users to receive emails when there are updates to site content') . '</p>';
@@ -23,7 +23,7 @@
    */
   function subscribe_permission() {
     return array(
-      'administer subscribe' => array (
+      'administer subscribe' => array(
         'title' => t('Administer Subscribe'),
         'description' => t('Perform administrative tasks on Subscribe functionality'),
       ),
