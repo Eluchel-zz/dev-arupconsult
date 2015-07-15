@@ -38,7 +38,8 @@
   background-color: #cc0000;
   border-radius: 200px;
   background-image: none;
-  padding: 100px 85px; }
+  padding: 100px 85px;
+  border: 3px black solid; }
 .content .view.view-publish-bulk-update .views-row {
   padding-top: 5px; }
   .content .view.view-publish-bulk-update .views-row .views-field-views-bulk-operations {
