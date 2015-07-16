@@ -10,3 +10,4 @@ sites/*/private
 
 .idea/codeStyleSettings.xml
 .idea/watcherTasks.xml
+.idea/workspace.xml
