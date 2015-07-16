@@ -6,4 +6,4 @@ sites/*/files
 sites/*/private
 
 # Ignore files that came from PHPStorm
-.idea/*
+.idea\*
