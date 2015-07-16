@@ -2,6 +2,8 @@
   /**
    * @file
    * A subscription for the new/changed/updated content on the site.
+   * @todo set up integration with the mail_edit module.
+   * @todo make the Subscription button like feedback has
    */
 
   /**
@@ -99,4 +101,10 @@
 
   }
 
-
+  /**
+   * @param $form
+   * @param $form_state
+   */
+  function subscribe_form($form, &$form_state) {
+    dpm($form_state);
+  }
