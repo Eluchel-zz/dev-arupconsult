@@ -4,3 +4,8 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+.idea/libraries/compass_library.xml
+.idea/codeStyleSettings.xml
+*.iml
+.idea/misc.xml
