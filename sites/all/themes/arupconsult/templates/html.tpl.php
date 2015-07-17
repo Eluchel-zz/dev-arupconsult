@@ -4,6 +4,7 @@
 <!--[if IE 8]>    <html lang="en" class="no-js oldie lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js">
+<head>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>
 
@@ -13,9 +14,9 @@
 </head>
 <?php
 $front = drupal_is_front_page();
-$front ? ($classes = 'front') : ($classes = 'not-front');
+$front ? ($classes .= ' front') : ($classes .= ' not-front');
 ?>
-<body class="<?php print $classes; ?>"><!--[if lt IE 7]>
+<body class="<?php print $classes; ?>" <?php print $attributes;?>><!--[if lt IE 7]>
 <p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p><![endif]-->
 <?php print $page_top; ?>
 <div id="page">
