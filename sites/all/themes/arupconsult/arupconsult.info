@@ -6,9 +6,23 @@ core            = 7.x
 stylesheets[all][] = css/base.css
 stylesheets[screen and (minwidth:300px)][] = css/responsive.css
 
-regions[help]        	= Help
+; CORE REGIONS - DISABLED
+;regions[highlighted] = Highlighted
+;regions[sidebar_first] = Sidebar First
+;regions[sidebar_second] = Sidebar Second
+
+; CORE REGIONS - REQUIRED
+regions[page_top] = Page Top
+regions[content] = Content
+regions[page_bottom] = Page Bottom
+
+; CORE REGIONS
+regions[header] = Header
+regions[help] = Help
+regions[footer] = Footer
+
+; CUSTOM REGIONS
 regions[feature]        = Featured Content
-regions[content]        = Content
 regions[sidebar_left]   = Left sidebar
 regions[sidebar_right]  = Right sidebar
 regions[footer_first]   = First Bottom
