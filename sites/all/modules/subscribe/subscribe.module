@@ -87,6 +87,13 @@
       '#required' => TRUE,
     );
 
+    $form['subscribe_write_introduction'] = array(
+      '#type' => 'text_format',
+      '#title' => t('Introduction Paragraph'),
+      '#description' => t('Write an introductory paragraph here that will be displayed first in all the emails sent out'),
+      '#default_value' => variable_get('subscribe_write_introduction'),
+    );
+
     return system_settings_form($form);
   }
 
