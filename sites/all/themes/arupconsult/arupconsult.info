@@ -1,0 +1,19 @@
+name = ARUP Consult
+description     = Drupal theme for ARUP Consult website
+core            = 7.x
+
+; STYLESHEETS
+stylesheets[all][] = css/base.css
+stylesheets[screen and (minwidth:300px)][] = css/responsive.css
+
+regions[help]        	= Help
+regions[feature]        = Featured Content
+regions[content]        = Content
+regions[sidebar_left]   = Left sidebar
+regions[sidebar_right]  = Right sidebar
+regions[footer_first]   = First Bottom
+regions[footer_second]  = Second Bottom
+regions[footer_third]   = Third Bottom
+regions[footer_forth]   = Forth Bottom
+regions[footer_fifth]   = Fifth Bottom
+regions[copyright]      = Copyright
