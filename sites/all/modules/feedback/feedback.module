@@ -363,7 +363,7 @@ function feedback_form($form, &$form_state) {
   );
 
   $form['email_message'] = array(
-      '#prefix' => '<div class="feedback-email-message">',
+      '#prefix' => '<div class="feedback-help">',
       '#markup' => t('Email address not required, but allows our clinical content team to contact you if we have any questions. ARUP will not share your email address with any other organization.'),
       '#suffix' => '</div>',
   );

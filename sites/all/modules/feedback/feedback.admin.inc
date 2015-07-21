@@ -377,7 +377,7 @@ function feedback_build_content($entry, $view_mode = 'full', $langcode = NULL) {
     'langcode' => $langcode,
   );
   drupal_alter('entity_view_mode', $view_mode, $context);
-  
+
   if (!empty($entry->useragent)) {
     $entry->content['browser'] = array(
       '#theme' => 'container',
