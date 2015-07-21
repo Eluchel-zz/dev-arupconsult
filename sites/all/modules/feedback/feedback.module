@@ -258,9 +258,10 @@ function feedback_menu() {
  */
 function feedback_page_build(&$page) {
   if (user_access('access feedback form') && !feedback_match_path(variable_get('feedback_excluded_paths', 'admin/reports/feedback'))) {
+    $title = variable_get('feedback_title', 'Feedback');
     $page['page_bottom']['feedback'] = array(
       '#theme' => 'feedback_form_display',
-      '#title' => t('Feedback'),
+      '#title' => t($title),
       '#content' => drupal_get_form('feedback_form'),
     );
     $path = drupal_get_path('module', 'feedback');
@@ -313,9 +314,10 @@ function feedback_form($form, &$form_state) {
     '#value' => $form_state['inline']['location'],
   );
 
+  $help = variable_get('feedback_help', 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.');
   $form['help'] = array(
     '#prefix' => '<div class="feedback-help">',
-    '#markup' => t('If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'),
+    '#markup' => t($help),
     '#suffix' => '</div>',
   );
   if (user_access('view feedback messages')) {
@@ -353,11 +355,24 @@ function feedback_form($form, &$form_state) {
       }
     }
   }
+  $message = variable_get('feedback_message', 'Message');
+
+  $form['email'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Email Address'),
+  );
+
+  $form['email_message'] = array(
+      '#prefix' => '<div class="feedback-email-message">',
+      '#markup' => t('Email address not required, but allows our clinical content team to contact you if we have any questions. ARUP will not share your email address with any other organization.'),
+      '#suffix' => '</div>',
+  );
+
   $form['message'] = array(
     '#type' => 'textarea',
     '#attributes' => array('class' => array('feedback-message')),
     '#cols' => 20,
-    '#title' => t('Message'),
+    '#title' => t($message),
     '#required' => TRUE,
     '#wysiwyg' => FALSE,
   );
@@ -371,9 +386,10 @@ function feedback_form($form, &$form_state) {
     // @todo Patch #type actions in core?
     '#attributes' => array('class' => array('clearfix')),
   );
+  $submit = variable_get('feedback_submit', 'Send feedback');
   $form['actions']['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Send feedback'),
+    '#value' => t($submit),
     '#id' => 'feedback-submit',
     '#ajax' => array(
       'wrapper' => 'feedback-form',
@@ -394,6 +410,8 @@ function feedback_form($form, &$form_state) {
 function feedback_form_submit($form, &$form_state) {
   $entry = new stdClass();
   entity_form_submit_build_entity('feedback', $entry, $form, $form_state);
+  if(!empty($form_state['values']['email']))
+    $entry->email = $form_state['values']['email'];
   $entry->message = $form_state['values']['message'];
   $entry->location = $form_state['values']['location'];
   feedback_save($entry);

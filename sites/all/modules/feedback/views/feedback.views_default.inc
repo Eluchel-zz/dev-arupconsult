@@ -36,6 +36,7 @@ function feedback_views_default_views() {
     'timestamp' => 'timestamp',
     'name' => 'name',
     'message' => 'message',
+    'email' => 'email',
     'useragent' => 'message',
     'view_entry' => 'message',
     'view_entry_delete' => 'message',
@@ -65,6 +66,11 @@ function feedback_views_default_views() {
       'empty_column' => 0,
     ),
     'message' => array(
+      'align' => '',
+      'separator' => ' ',
+      'empty_column' => 0,
+    ),
+    'email' => array(
       'align' => '',
       'separator' => ' ',
       'empty_column' => 0,
@@ -130,6 +136,11 @@ function feedback_views_default_views() {
   $handler->display->display_options['fields']['message']['table'] = 'feedback';
   $handler->display->display_options['fields']['message']['field'] = 'message';
   $handler->display->display_options['fields']['message']['element_type'] = 'div';
+  /* Field: Feedback: Email Address */
+  $handler->display->display_options['fields']['email']['id'] = 'email';
+  $handler->display->display_options['fields']['email']['table'] = 'feedback';
+  $handler->display->display_options['fields']['email']['field'] = 'email';
+  $handler->display->display_options['fields']['email']['element_type'] = 'div';
   /* Field: Feedback: User agent */
   $handler->display->display_options['fields']['useragent']['id'] = 'useragent';
   $handler->display->display_options['fields']['useragent']['table'] = 'feedback';
@@ -241,6 +252,7 @@ function feedback_views_default_views() {
     t('Location'),
     t('Date'),
     t('Message'),
+    t('Email'),
     t('Page'),
     t('Attachment'),
     t('Processed Feedback Messages'),

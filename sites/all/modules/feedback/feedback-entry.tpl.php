@@ -25,6 +25,10 @@
     <div class="field-label"><?php print t('Message'); ?>:&nbsp;</div>
     <?php print render($message); ?>
   </div>
+  <div class="field">
+    <div class="field-label"><?php print t('Email'); ?>:&nbsp;</div>
+    <?php print render($email); ?>
+  </div>
 
   <?php print render($content); ?>
 </div>

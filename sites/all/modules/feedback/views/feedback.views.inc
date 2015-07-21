@@ -98,6 +98,19 @@ function feedback_views_data() {
       'handler' => 'views_handler_sort',
     ),
   );
+  $data['feedback']['email'] = array (
+    'title' => t('Email Address'),
+    'help' => t('The email address of the person who left the feedback.'),
+    'field' => array(
+        'handler' => 'views_handler_field',
+    ),
+    'filter' => array(
+        'handler' => 'views_handler_filter_string',
+    ),
+    'sort' => array(
+        'handler' => 'views_handler_sort',
+    ),
+  );
   $data['feedback']['location'] = array(
     'title' => t('Location'),
     'help' => t('The internal Drupal path of the page the feedback message was submitted on.'),

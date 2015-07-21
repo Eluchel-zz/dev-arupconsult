@@ -118,6 +118,7 @@ function theme_feedback_admin_view_form($variables) {
         drupal_render($entry['date']),
         drupal_render($entry['user']),
         drupal_render($entry['message']),
+        drupal_render($entry['email']),
         drupal_render($entry['operations']),
       );
       // Render the checkbox.
@@ -198,6 +199,12 @@ function feedback_entry_form($form, &$form_state, $entry) {
     '#default_value' => $entry->message,
   );
 
+  $form['email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email Address'),
+    '#default_value' => $entry->email,
+  );
+
   field_attach_form('feedback', $entry, $form, $form_state);
 
   $form['actions'] = array(
@@ -226,6 +233,7 @@ function feedback_entry_form_submit(&$form, &$form_state) {
   $entry = feedback_load($form['#fid']);
   entity_form_submit_build_entity('feedback', $entry, $form, $form_state);
   $entry->message = $form_state['values']['message'];
+  $entry->email = $form_state['values']['email'];
   $entry->location = $form_state['values']['location'];
   $entry->location_masked = feedback_mask_path($entry->location);
   $entry->url = url($entry->location, array('absolute' => TRUE));
@@ -258,6 +266,45 @@ function feedback_admin_settings_form($form, &$form_state) {
     '#title' => t('Paths to exclude from feedback display'),
     '#default_value' => variable_get('feedback_excluded_paths', 'admin/reports/feedback'),
     '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array('%blog' => 'blog', '%blog-wildcard' => 'blog/*', '%front' => '<front>')),
+  );
+  $form['fieldset_labels'] = array(
+    '#type'        => 'fieldset',
+    '#title'       => t('Feedback labels'),
+    '#description' => t('You can edit labels and titles for default fields.'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['fieldset_labels']['feedback_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_title', 'Feedback'),
+    '#description' => t("Specify the title that will appear on the feedback form. Defaults to 'Feedback'"),
+  );
+  $form['fieldset_labels']['feedback_help'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Help'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => variable_get('feedback_help', 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'),
+    '#description' => t("Feedback submission guidelines. Defaults to 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'"),
+  );
+  $form['fieldset_labels']['feedback_message'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Message'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_message', 'Message'),
+    '#description' => t("Specify the label that will appear over the feedback message text field. Defaults to 'Message'"),
+  );
+  $form['fieldset_labels']['feedback_submit'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Submit button'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_submit', 'Send feedback'),
+    '#description' => t("Specify the label that will appear on the feedback submit button. Defaults to 'Send feedback'"),
   );
   return system_settings_form($form);
 }
@@ -330,10 +377,7 @@ function feedback_build_content($entry, $view_mode = 'full', $langcode = NULL) {
     'langcode' => $langcode,
   );
   drupal_alter('entity_view_mode', $view_mode, $context);
-
-  $entry->content['message'] = array(
-    '#markup' => check_plain($entry->message),
-  );
+  
   if (!empty($entry->useragent)) {
     $entry->content['browser'] = array(
       '#theme' => 'container',
@@ -390,6 +434,8 @@ function template_preprocess_feedback_entry(&$variables) {
   $variables['location'] = l($entry->location, $entry->url);
   $variables['date'] = format_date($entry->timestamp, 'small');
   $variables['account'] = check_plain(format_username($entry));
+  $variables['message'] = check_plain($entry->message);
+  $variables['email'] = check_plain($entry->email);
 }
 
 /**
