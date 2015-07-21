@@ -40,11 +40,11 @@ function feedback_schema() {
         'not null' => TRUE,
       ),
       'email' => array(
-          'description' => 'The email address of the submitter.',
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => FALSE,
-      ),
+        'description' => 'The email address of the submitter.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+       ),
       'location' => array(
         'description' => 'System path of the originating page.',
         'type' => 'text',

@@ -274,37 +274,13 @@ function feedback_admin_settings_form($form, &$form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  $form['fieldset_labels']['feedback_title'] = array(
+  $form['fieldset_labels']['feedback_email_message'] = array(
     '#type' => 'textfield',
-    '#title' => t('Title'),
+    '#title' => t('Email Message'),
     '#size' => 40,
     '#maxlength' => 128,
-    '#default_value' => variable_get('feedback_title', 'Feedback'),
-    '#description' => t("Specify the title that will appear on the feedback form. Defaults to 'Feedback'"),
-  );
-  $form['fieldset_labels']['feedback_help'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Help'),
-    '#size' => 40,
-    '#maxlength' => 255,
-    '#default_value' => variable_get('feedback_help', 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'),
-    '#description' => t("Feedback submission guidelines. Defaults to 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'"),
-  );
-  $form['fieldset_labels']['feedback_message'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Message'),
-    '#size' => 40,
-    '#maxlength' => 128,
-    '#default_value' => variable_get('feedback_message', 'Message'),
-    '#description' => t("Specify the label that will appear over the feedback message text field. Defaults to 'Message'"),
-  );
-  $form['fieldset_labels']['feedback_submit'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Submit button'),
-    '#size' => 40,
-    '#maxlength' => 128,
-    '#default_value' => variable_get('feedback_submit', 'Send feedback'),
-    '#description' => t("Specify the label that will appear on the feedback submit button. Defaults to 'Send feedback'"),
+    '#default_value' => variable_get('feedback_email_message', 'Enter your Email Address'),
+    '#description' => t("Specify the message that will appear below the email field on the feedback form. Defaults to 'Enter your Email Address'"),
   );
   return system_settings_form($form);
 }

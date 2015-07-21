@@ -102,13 +102,13 @@ function feedback_views_data() {
     'title' => t('Email Address'),
     'help' => t('The email address of the person who left the feedback.'),
     'field' => array(
-        'handler' => 'views_handler_field',
+      'handler' => 'views_handler_field',
     ),
     'filter' => array(
-        'handler' => 'views_handler_filter_string',
+      'handler' => 'views_handler_filter_string',
     ),
     'sort' => array(
-        'handler' => 'views_handler_sort',
+      'handler' => 'views_handler_sort',
     ),
   );
   $data['feedback']['location'] = array(
