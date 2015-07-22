@@ -7,8 +7,4 @@ sites/*/private
 
 # Ignore files that came from PHPStorm
 .idea/*
-
-.idea/codeStyleSettings.xml
-.idea/watcherTasks.xml
-.idea/workspace.xml
-.idea/workspace.xml
+sites/*/.idea
