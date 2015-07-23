@@ -8,3 +8,4 @@ sites/*/private
 # Ignore files that came from PHPStorm
 .idea/*
 sites/*/.idea
+.idea/misc.xml
