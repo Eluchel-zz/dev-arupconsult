@@ -407,7 +407,7 @@ function feedback_form_submit($form, &$form_state) {
   $entry = new stdClass();
   entity_form_submit_build_entity('feedback', $entry, $form, $form_state);
   $entry->message = $form_state['values']['message'];
-  if(!empty($form_state['values']['email']))
+  if (!empty($form_state['values']['email']))
     $entry->email = $form_state['values']['email'];
   $entry->location = $form_state['values']['location'];
   feedback_save($entry);
@@ -502,6 +502,8 @@ function feedback_load_multiple($fids = array(), $conditions = array()) {
  *
  * @see hook_feedback_insert()
  * @see hook_feedback_update()
+ *
+ * @return array
  */
 function feedback_save($entry) {
   global $user;

@@ -43,7 +43,7 @@ function feedback_admin_view_form($form, &$form_state) {
       ->execute()->fetchCol();
     $form['feedback-messages'][$status] = array(
       '#type' => 'fieldset',
-      '#title' => $status_headings[$status],
+      '#title' => check_plain($status_headings[$status]),
       '#collapsible' => TRUE,
       '#collapsed' => $status,
       '#attributes' => array('class' => array('feedback-messages')),

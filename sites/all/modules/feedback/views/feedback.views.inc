@@ -98,7 +98,7 @@ function feedback_views_data() {
       'handler' => 'views_handler_sort',
     ),
   );
-  $data['feedback']['email'] = array (
+  $data['feedback']['email'] = array(
     'title' => t('Email Address'),
     'help' => t('The email address of the person who left the feedback.'),
     'field' => array(
