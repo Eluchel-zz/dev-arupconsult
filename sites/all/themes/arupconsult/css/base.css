@@ -2,5 +2,7 @@
 	file: base.scss
 	Author: Ben Hall
 ***********************************************/
+img {
+  max-width: 100%; }
 
 /*# sourceMappingURL=base.css.map */

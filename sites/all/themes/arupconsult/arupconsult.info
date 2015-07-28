@@ -3,13 +3,21 @@ description     = Drupal theme for ARUP Consult website
 core            = 7.x
 
 ; STYLESHEETS
+; The base css file for all devices
 stylesheets[all][] = css/base.css
-stylesheets[screen and (minwidth:300px)][] = css/responsive.css
+
+; The css file for mobile devices (320px - 600px)
+stylesheets[all and (min-width: 320px)][] = css/mobile.css
+
+; The css file for tablets(600px - 1024px)
+stylesheets[all and (min-width: 600px)][] = css/tablet.css
+
+; The css file for larger desktop screen sizes(1024px - 1200px)
+stylesheets[all and (min-width: 1024px)][] = css/desktop.css
+
 
 ; CORE REGIONS - DISABLED
 ;regions[highlighted] = Highlighted
-;regions[sidebar_first] = Sidebar First
-;regions[sidebar_second] = Sidebar Second
 
 ; CORE REGIONS - REQUIRED
 regions[page_top] = Page Top
@@ -19,14 +27,15 @@ regions[page_bottom] = Page Bottom
 ; CORE REGIONS
 regions[header] = Header
 regions[help] = Help
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
 regions[footer] = Footer
 
 ; CUSTOM REGIONS
 regions[feature]        = Featured Content
-regions[sidebar_left]   = Left sidebar
-regions[sidebar_right]  = Right sidebar
-regions[footer_first]   = First Bottom
-regions[footer_second]  = Second Bottom
-regions[footer_third]   = Third Bottom
-regions[footer_forth]   = Forth Bottom
 regions[copyright]      = Copyright
+
+; FEATURES
+features[] = logo
+features[] = name
+features[] = slogan
