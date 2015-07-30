@@ -1,0 +1,54 @@
+#header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+0,464646+18,464646+100 */
+  background: #424242; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #424242 0%, #464646 18%, #464646 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#424242), color-stop(18%,#464646), color-stop(100%,#464646)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #424242 0%,#464646 18%,#464646 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #424242 0%,#464646 18%,#464646 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #424242 0%,#464646 18%,#464646 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #424242 0%,#464646 18%,#464646 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#464646',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+  .wrapper {
+    #logo {
+      float: left;
+      img {
+        margin: 20px 10px;
+      }
+    }
+    #site-name {
+      margin: 25px 10px;
+      color: white;
+      float: left;
+    }
+  }
+  
+}
+
+#navigation {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#285780+0,285780+100 */
+  background: #285780; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #285780 0%, #285780 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#285780), color-stop(100%,#285780)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #285780 0%,#285780 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #285780 0%,#285780 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #285780 0%,#285780 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #285780 0%,#285780 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285780', endColorstr='#285780',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  border-top:2px solid #3e6991;
+  padding-top: 5px;
+  padding-bottom:7px;
+  #primary-nav {
+    ul {
+      margin: 0;
+      li {
+        display: inline-block;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

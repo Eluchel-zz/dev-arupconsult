@@ -72,44 +72,36 @@
  */
 ?>
 
-  <div id="header" class="clearfix">
+  <div id="header" class="clearfix"><div class="wrapper">
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
-    <?php endif; ?>
 
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name"><strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong></div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
 
-  </div>
+  </div></div>
 
-  <?php if ($main_menu || $secondary_menu): ?>
-    <div id="navigation">
-      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-      <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-    </div>
-  <?php endif; ?>
+    <div id="navigation"><div class="wrapper">
+      <nav id="primary-nav" role="navigation">
+        <?php
+        if ($main_menu):
+            $menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+            print drupal_render($menu);
+        endif;
+        ?>
+      </nav>
+
+      <nav id="secondary-nav" role="navigation">
+        <?php if ($secondary_menu):
+          $menu = menu_tree(variable_get('menu_secondary_links_source', 'secondary-menu'));
+          print drupal_render($menu);
+        endif; ?>
+      </nav>
+    </div></div>
 
   <?php if ($breadcrumb): ?>
     <div id="breadcrumb"><?php print $breadcrumb; ?></div>
@@ -117,29 +109,63 @@
 
   <?php print $messages; ?>
 
-  <div id="main" class="clearfix">
+  <?php
+  // Render the sidebars to see if there's anything in them.
+  $sidebar_first  = render($page['sidebar_first']);
+  $sidebar_second = render($page['sidebar_second']);
+  ?>
 
-    <div id="content" class="content">
-      <a id="main-content"></a>
+  <div id="content" class="clearfix <?php print ($sidebar_first && $sidebar_second ? 'two-sidebars' : ($sidebar_first || $sidebar_second ? 'one-sidebar' : 'no-sidebars')) ?>" role="main"><div class="wrapper">
+
+
       <?php print render($page['help']); ?>
-      <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php if ($title): ?><h1 class="title" id="<?php if($node && $node->type == 'disease_topic'){print "disease-";} ?>page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php if ($node && $node->type == 'disease_topic'): ?>
+      <p class="author" id="primary-author">Primary Author:
+      <?php if($node && $node->type == 'disease_topic' && !empty($node->field_author['und'][0]['user']->field_url)) {
+        print '<a href="http://' . $node->field_author['und'][0]['user']->field_url['und'][0]['safe_value'] . '" target="_blank" class="link">' . $node->field_author['und'][0]['user']->realname . '</a>';
+      }
+      ?>
+      </p><?php endif; ?>
+      <?php if ($tabs): ?>
+        <div class="tabs">
+          <?php print render($tabs); ?>
+        </div>
+      <?php endif; ?>
+    <div id="main-content">
       <?php print render($page['content']); ?>
     </div>
 
-    <?php if ($page['sidebar_first']): ?>
+    <?php if ($sidebar_first): ?>
       <div id="sidebar-first" class="sidebar">
-        <?php print render($page['sidebar_first']); ?>
+        <?php print $sidebar_first; ?>
       </div>
     <?php endif; ?>
 
-    <?php if ($page['sidebar_second']): ?>
+    <?php if ($sidebar_second): ?>
       <div id="sidebar-second" class="sidebar">
-        <?php print render($page['sidebar_second']); ?>
+        <?php print $sidebar_second; ?>
       </div>
     <?php endif; ?>
 
-  </div>
+  </div></div>
 
-  <div id="footer">
+  <div id="footer"><div class="wrapper">
     <?php print render($page['footer']); ?>
+    <div id="footer-first">
+      <?php print render($page['footer_first']); ?>
+    </div>
+    <div id="footer-second">
+      <?php print render($page['footer_second']); ?>
+    </div>
+    <div id="footer-third">
+      <?php print render($page['footer_third']); ?>
+    </div>
+    <div id="footer-fourth">
+      <?php print render($page['footer_fourth']); ?>
+    </div>
+  </div></div>
+
+  <div id="copyright">
+    <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?> <?php print $site_name; ?></p>
   </div>

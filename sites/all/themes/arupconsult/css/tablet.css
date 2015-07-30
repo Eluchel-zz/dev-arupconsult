@@ -1,3 +1,10 @@
-
+@media all and (min-width: 768px) {
+  #content #disease-page-title {
+    float: left; }
+  #content #primary-author {
+    float: right;
+    margin-top: 37.5px; }
+  #content .tabs, #content #main-content {
+    clear: both; } }
 
 /*# sourceMappingURL=tablet.css.map */

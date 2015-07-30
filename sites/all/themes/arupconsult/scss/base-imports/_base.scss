@@ -1,5 +1,49 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, em, img, q, small, strike, strong, sub, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+}
 
+#content, #sidebar-first, #sidebar-second, #navigation, #footer, #header, .wrapper {
+  display: block;
+}
+
+#footer-first, #footer-second, #footer-third, #footer-fourth {
+  display: inline-block;
+}
 
 img {
   max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+html {
+  font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+  body {
+    margin: auto;
+    &.admin-menu {
+      margin-top: 30px !important;
+    }
+    &.admin-menu-with-shortcuts {
+      margin-top: 66px !important;
+    }
+    #page {
+      #main {
+
+      }
+    }
+  }
+}
+
+.node-disease-topic {
+  .field-name-field-author {
+    display: none;
+  }
 }

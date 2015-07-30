@@ -19,23 +19,25 @@ stylesheets[all and (min-width: 1024px)][] = css/desktop.css
 ; CORE REGIONS - DISABLED
 ;regions[highlighted] = Highlighted
 
-; CORE REGIONS - REQUIRED
+; REGIONS
 regions[page_top] = Page Top
-regions[content] = Content
-regions[page_bottom] = Page Bottom
-
-; CORE REGIONS
-regions[header] = Header
-regions[help] = Help
-regions[sidebar_first] = Sidebar First
-regions[sidebar_second] = Sidebar Second
-regions[footer] = Footer
-
-; CUSTOM REGIONS
+regions[header]         = Header
+regions[help]           = Help
 regions[feature]        = Featured Content
-regions[copyright]      = Copyright
+regions[content]        = Content
+regions[sidebar_first]  = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[footer]         = Footer
+regions[footer_first]   = First Bottom
+regions[footer_second]  = Second Bottom
+regions[footer_third]   = Third Bottom
+regions[footer_fourth]   = Fourth Bottom
+regions[page_bottom] = Page Bottom
 
 ; FEATURES
 features[] = logo
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
 features[] = name
 features[] = slogan

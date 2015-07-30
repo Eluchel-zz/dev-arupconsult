@@ -2,7 +2,126 @@
 	file: base.scss
 	Author: Ben Hall
 ***********************************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, em, img, q, small, strike, strong, sub, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+#content, #sidebar-first, #sidebar-second, #navigation, #footer, #header, .wrapper {
+  display: block; }
+
+#footer-first, #footer-second, #footer-third, #footer-fourth {
+  display: inline-block; }
+
 img {
   max-width: 100%; }
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto; }
+
+html {
+  font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+  html body {
+    margin: auto; }
+    html body.admin-menu {
+      margin-top: 30px !important; }
+    html body.admin-menu-with-shortcuts {
+      margin-top: 66px !important; }
+
+.node-disease-topic .field-name-field-author {
+  display: none; }
+
+#header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+0,464646+18,464646+100 */
+  background: #424242;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #424242 0%, #464646 18%, #464646 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #424242), color-stop(18%, #464646), color-stop(100%, #464646));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #424242 0%, #464646 18%, #464646 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #424242 0%, #464646 18%, #464646 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #424242 0%, #464646 18%, #464646 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #424242 0%, #464646 18%, #464646 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#464646',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+  #header .wrapper #logo {
+    float: left; }
+    #header .wrapper #logo img {
+      margin: 20px 10px; }
+  #header .wrapper #site-name {
+    margin: 25px 10px;
+    color: white;
+    float: left; }
+
+#navigation {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#285780+0,285780+100 */
+  background: #285780;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #285780 0%, #285780 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #285780), color-stop(100%, #285780));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #285780 0%, #285780 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #285780 0%, #285780 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #285780 0%, #285780 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #285780 0%, #285780 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285780', endColorstr='#285780',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border-top: 2px solid #3e6991;
+  padding-top: 5px;
+  padding-bottom: 7px; }
+  #navigation #primary-nav ul {
+    margin: 0; }
+    #navigation #primary-nav ul li {
+      display: inline-block; }
+      #navigation #primary-nav ul li a {
+        color: white; }
+
+body {
+  font-size: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal; }
+
+h1 {
+  color: #aa1e1e;
+  font-size: 1.9rem;
+  margin: 15px 0 15px 0; }
+
+h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 10px 0 10px 0; }
+
+h3 {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 10px 0 10px 0; }
+
+h4 {
+  color: #aa1e1e;
+  font-size: 1.25rem;
+  margin: 10px 0 10px 0; }
+
+h5 {
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 10px 0 10px 0; }
 
 /*# sourceMappingURL=base.css.map */
