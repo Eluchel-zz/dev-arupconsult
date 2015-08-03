@@ -6,13 +6,13 @@ core            = 7.x
 ; The base css file for all devices
 stylesheets[all][] = css/base.css
 
-; The css file for mobile devices (320px - 600px)
+; The css file for mobile devices (320px - 599px)
 stylesheets[all and (min-width: 320px)][] = css/mobile.css
 
-; The css file for tablets(600px - 1024px)
+; The css file for tablets(600px - 1023px)
 stylesheets[all and (min-width: 600px)][] = css/tablet.css
 
-; The css file for larger desktop screen sizes(1024px - 1200px)
+; The css file for larger desktop screen sizes(1024px and greater)
 stylesheets[all and (min-width: 1024px)][] = css/desktop.css
 
 

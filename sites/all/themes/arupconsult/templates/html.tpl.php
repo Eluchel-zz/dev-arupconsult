@@ -12,9 +12,7 @@
 <?php print $scripts; ?>
 
 </head>
-<?php
-drupal_is_front_page() ? ($classes .= ' front') : ($classes .= ' not-front');
-?>
+
 <body class="<?php print $classes; ?>" <?php print $attributes;?>><!--[if lt IE 7]>
 <p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p><![endif]-->
 <?php print $page_top; ?>

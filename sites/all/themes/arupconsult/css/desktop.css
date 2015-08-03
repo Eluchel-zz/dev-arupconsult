@@ -1,3 +1,7 @@
-
+@media all and (min-width: 1024px) {
+  #footer .wrapper .footer-block {
+    width: 24.5%; }
+    #footer .wrapper .footer-block .block {
+      padding: 2%; } }
 
 /*# sourceMappingURL=desktop.css.map */

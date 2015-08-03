@@ -85,30 +85,27 @@
 
   </div></div>
 
-    <div id="navigation"><div class="wrapper">
-      <nav id="primary-nav" role="navigation">
-        <?php
-        if ($main_menu):
-            $menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-            print drupal_render($menu);
-        endif;
-        ?>
-      </nav>
-
-      <nav id="secondary-nav" role="navigation">
-        <?php if ($secondary_menu):
-          $menu = menu_tree(variable_get('menu_secondary_links_source', 'secondary-menu'));
+  <div id="navigation"><div class="wrapper">
+    <nav id="primary-nav" role="navigation">
+      <?php
+      if ($main_menu):
+          $menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
           print drupal_render($menu);
-        endif; ?>
-      </nav>
-    </div></div>
+      endif;
+      ?>
+    </nav>
 
-  <?php if ($breadcrumb): ?>
-    <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-  <?php endif; ?>
+    <nav id="secondary-nav" role="navigation">
+      <?php if ($secondary_menu):
+        $menu = menu_tree(variable_get('menu_secondary_links_source', 'secondary-menu'));
+        print drupal_render($menu);
+      endif; ?>
+    </nav>
+  </div></div>
 
-  <?php print $messages; ?>
-
+  <div class="wrapper">
+    <?php print $messages; ?>
+  </div>
   <?php
   // Render the sidebars to see if there's anything in them.
   $sidebar_first  = render($page['sidebar_first']);
@@ -119,21 +116,27 @@
 
 
       <?php print render($page['help']); ?>
-      <?php if ($title): ?><h1 class="title" id="<?php if($node && $node->type == 'disease_topic'){print "disease-";} ?>page-title"><?php print $title; ?></h1><?php endif; ?>
-      <?php if ($node && $node->type == 'disease_topic'): ?>
+      <?php if ($title): ?><h1 class="title" id="<?php
+        if(isset($node)) {
+          if($node->type == 'disease_topic'){
+            print "disease-";
+          }
+        }
+      ?>page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php if (isset($node)): if($node->type == 'disease_topic'): ?>
       <p class="author" id="primary-author">Primary Author:
       <?php if($node && $node->type == 'disease_topic' && !empty($node->field_author['und'][0]['user']->field_url)) {
-        print '<a href="http://' . $node->field_author['und'][0]['user']->field_url['und'][0]['safe_value'] . '" target="_blank" class="link">' . $node->field_author['und'][0]['user']->realname . '</a>';
-      }
+          print '<a href="http://' . $node->field_author['und'][0]['user']->field_url['und'][0]['safe_value'] . '" target="_blank" class="link">' . $node->field_author['und'][0]['user']->realname . '</a>';
+        }
       ?>
-      </p><?php endif; ?>
+      </p><?php endif;endif; ?>
       <?php if ($tabs): ?>
         <div class="tabs">
           <?php print render($tabs); ?>
         </div>
       <?php endif; ?>
     <div id="main-content">
-      <?php print render($page['content']); ?>
+      <?php print render($page['content']);?>
     </div>
 
     <?php if ($sidebar_first): ?>
@@ -152,20 +155,20 @@
 
   <div id="footer"><div class="wrapper">
     <?php print render($page['footer']); ?>
-    <div id="footer-first">
+    <div class="footer-block" id="footer-first">
       <?php print render($page['footer_first']); ?>
     </div>
-    <div id="footer-second">
+    <div class="footer-block" id="footer-second">
       <?php print render($page['footer_second']); ?>
     </div>
-    <div id="footer-third">
+    <div class="footer-block" id="footer-third">
       <?php print render($page['footer_third']); ?>
     </div>
-    <div id="footer-fourth">
+    <div class="footer-block" id="footer-fourth">
       <?php print render($page['footer_fourth']); ?>
     </div>
   </div></div>
 
-  <div id="copyright">
+  <div id="copyright"><div class="wrapper">
     <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?> <?php print $site_name; ?></p>
-  </div>
+  </div></div>

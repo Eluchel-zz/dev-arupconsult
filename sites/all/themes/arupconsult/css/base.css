@@ -31,9 +31,47 @@ html {
       margin-top: 30px !important; }
     html body.admin-menu-with-shortcuts {
       margin-top: 66px !important; }
+    html body #page #content .title {
+      margin-left: 15px; }
 
 .node-disease-topic .field-name-field-author {
   display: none; }
+
+#group-tab-group-node-disease-topic-default .resp-tabs-list li {
+  background: #eee url(../images/tabs.gif) 0px 0px repeat-x;
+  border: 1px solid #ccc;
+  color: #333;
+  font-weight: bold;
+  height: 20px;
+  padding: 4px 20px 3px 20px;
+  outline: none;
+  text-decoration: none;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px; }
+  #group-tab-group-node-disease-topic-default .resp-tabs-list li.resp-tab-active {
+    background: #fff;
+    color: #aa1e1e;
+    padding: 4px 20px 3px 20px !important;
+    border-bottom: 2px white solid; }
+
+#content .wrapper {
+  clear: both;
+  height: auto; }
+#content.one-sidebar #main-content {
+  float: left;
+  max-width: 75%;
+  margin-left: 2%;
+  margin-right: 1%;
+  padding: 2% 0 1% 0px; }
+#content.one-sidebar #sidebar-second {
+  float: right;
+  padding: 2% 1% 1% 0px;
+  width: 20%; }
+#content.no-sidebars #main-content {
+  max-width: 95%;
+  margin: auto; }
 
 #header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+0,464646+18,464646+100 */
@@ -123,5 +161,8 @@ h5 {
   font-weight: bold;
   font-size: 1rem;
   margin: 10px 0 10px 0; }
+
+#copyright p.copyright {
+  text-align: center; }
 
 /*# sourceMappingURL=base.css.map */
