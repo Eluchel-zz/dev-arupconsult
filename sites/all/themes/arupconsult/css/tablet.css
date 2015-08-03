@@ -1,3 +1,6 @@
+@media all and (min-width: 600px) {
+  #block-block-7 .content #second-para {
+    padding-top: 25px; } }
 @media all and (min-width: 768px) {
   #content #disease-page-title {
     float: left; }

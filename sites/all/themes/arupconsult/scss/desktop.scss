@@ -1,4 +1,26 @@
 @media all and (min-width: 1024px) {
+  .front{
+    #page {
+      #content {
+        #main-content {
+          float: left;
+          max-width: 65%;
+          margin-left: 2%;
+          margin-right: 1%;
+          padding: 2% 0 1% 0;
+        }
+        #sidebar-second {
+          float: right;
+          padding: 2% 1% 15px 0;
+          max-width: 30%;
+          margin: 0;
+          #block-block-7 .content #second-para {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+  }
   #content {
     .wrapper {
       clear: both;

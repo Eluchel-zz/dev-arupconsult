@@ -163,6 +163,17 @@ html {
   margin: auto;
   padding-bottom: 15px; }
 
+.front #page-title {
+  display: none; }
+.front #first-time {
+  display: none; }
+
+#block-block-7 img {
+  float: left;
+  padding: 5px; }
+#block-block-7 #second-para {
+  padding-top: 15px; }
+
 #header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+0,464646+18,464646+100 */
   background: #424242;
