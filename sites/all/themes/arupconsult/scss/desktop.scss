@@ -1,5 +1,43 @@
 @media all and (min-width: 1024px) {
+  #content {
+    .wrapper {
+      clear: both;
+      height: auto;
+      border-bottom: none;
+    }
+    &.two-sidebars {
+
+    }
+
+    &.one-sidebar {
+
+      #main-content {
+        float: left;
+        max-width: 75%;
+        margin-left: 2%;
+        margin-right: 1%;
+        padding:2% 0 1% 0;
+      }
+      #sidebar-second {
+        float:right;
+        padding:2% 1% 15px 0;
+        max-width:20%;
+        margin: 0;
+      }
+    }
+
+    &.no-sidebars {
+      #main-content {
+        max-width: 95%;
+        margin: auto;
+      }
+    }
+  }
   #footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    border-top: 1px gray solid;
     .wrapper {
       .footer-block {
         width: 24.5%;

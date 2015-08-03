@@ -2,12 +2,31 @@
 	file: base.scss
 	Author: Ben Hall
 ***********************************************/
+/* Global Reset */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, cite, code, em, img, q, small, strike, strong, sub, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   vertical-align: baseline; }
+
+:focus {
+  outline: 0; }
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  outline: 0;
+  border: 0; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left; }
 
 #content, #sidebar-first, #sidebar-second, #navigation, #footer, #header, .wrapper {
   display: block; }
@@ -23,16 +42,89 @@ img {
   width: 100%;
   margin: auto; }
 
+/* Table details */
+table {
+  clear: both;
+  border-collapse: collapse;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.5em;
+  width: 100%; }
+
+table th {
+  background: #e6f0fa;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #999;
+  font-weight: bold;
+  padding: 5px 7px 5px 7px; }
+
+table td {
+  padding: 5px 7px 5px 7px;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd; }
+
+table p {
+  margin: 0; }
+
+/* General */
+a {
+  color: #0057B8;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover {
+    color: #aa1e1e; }
+  a:active {
+    color: #555; }
+
+hr {
+  clear: both;
+  border: 0;
+  color: #ccc;
+  background-color: #ccc;
+  height: 1px;
+  margin: 5px 0px 5px 0px; }
+
+p {
+  line-height: 1.5em;
+  margin: 10px 0px 15px 0px; }
+
+blockquote {
+  line-height: 1.5em;
+  quotes: none; }
+
+ol, ul {
+  list-style: none;
+  line-height: 1.5em; }
+
+pre, code {
+  font: 1em "Courier New", Courier, mono; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #aaa; }
+
+ins {
+  padding: 1px;
+  background-color: #fffadc;
+  text-decoration: none; }
+
+/* HTML */
 html {
-  font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+  overflow-y: scroll; }
   html body {
+    color: #111;
+    font: 77% Arial, Helvetica, sans-serif;
     margin: auto; }
     html body.admin-menu {
       margin-top: 30px !important; }
     html body.admin-menu-with-shortcuts {
       margin-top: 66px !important; }
+    html body #page #content p a {
+      font-weight: bold; }
     html body #page #content .title {
       margin-left: 15px; }
+    html body #page #content #main-content {
+      line-height: 1.5em; }
 
 .node-disease-topic .field-name-field-author {
   display: none; }
@@ -56,22 +148,20 @@ html {
     padding: 4px 20px 3px 20px !important;
     border-bottom: 2px white solid; }
 
-#content .wrapper {
-  clear: both;
-  height: auto; }
 #content.one-sidebar #main-content {
-  float: left;
-  max-width: 75%;
+  max-width: 95%;
   margin-left: 2%;
-  margin-right: 1%;
-  padding: 2% 0 1% 0px; }
+  margin-right: 2%;
+  padding-bottom: 15px; }
 #content.one-sidebar #sidebar-second {
-  float: right;
-  padding: 2% 1% 1% 0px;
-  width: 20%; }
+  max-width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-bottom: 15px; }
 #content.no-sidebars #main-content {
   max-width: 95%;
-  margin: auto; }
+  margin: auto;
+  padding-bottom: 15px; }
 
 #header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+0,464646+18,464646+100 */
@@ -118,14 +208,15 @@ html {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285780', endColorstr='#285780',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  border-top: 2px solid #3e6991;
-  padding-top: 5px;
-  padding-bottom: 7px; }
+  border-top: 3px solid #3e6991;
+  padding-top: 3px;
+  padding-bottom: 5px; }
   #navigation #primary-nav ul {
     margin: 0; }
     #navigation #primary-nav ul li {
       display: inline-block; }
       #navigation #primary-nav ul li a {
+        font-size: 12px;
         color: white; }
 
 body {
@@ -162,7 +253,16 @@ h5 {
   font-size: 1rem;
   margin: 10px 0 10px 0; }
 
+#footer {
+  font-size: .9em;
+  margin: auto;
+  padding-top: 5px;
+  max-width: 950px; }
+  #footer .wrapper .footer-block {
+    text-align: center; }
+
 #copyright p.copyright {
+  font-size: .9em;
   text-align: center; }
 
 /*# sourceMappingURL=base.css.map */

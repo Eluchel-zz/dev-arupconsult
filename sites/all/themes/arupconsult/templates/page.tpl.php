@@ -170,5 +170,5 @@
   </div></div>
 
   <div id="copyright"><div class="wrapper">
-    <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?> <?php print $site_name; ?></p>
+    <p class="copyright">&copy; <?php echo date("Y"); ?> <?php print t('ARUP Laboratories. All Rights Reserved.'); ?></p>
   </div></div>

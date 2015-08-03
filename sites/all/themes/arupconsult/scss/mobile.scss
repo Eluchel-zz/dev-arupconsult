@@ -1,7 +1,11 @@
 @media all and (min-width: 320px) {
+  #content {
+    .wrapper {
+      border-bottom: 1px gray solid;
+    }
+  }
   #footer {
     .wrapper {
-      border-top: 1px gray solid;
       .footer-block {
         width: 100%;
         .block {

@@ -37,15 +37,16 @@
   background: radial-gradient(ellipse at center,  #285780 0%,#285780 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#285780', endColorstr='#285780',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-  border-top:2px solid #3e6991;
-  padding-top: 5px;
-  padding-bottom:7px;
+  border-top:3px solid #3e6991;
+  padding-top: 3px;
+  padding-bottom:5px;
   #primary-nav {
     ul {
       margin: 0;
       li {
         display: inline-block;
         a {
+          font-size: 12px;
           color: white;
         }
       }

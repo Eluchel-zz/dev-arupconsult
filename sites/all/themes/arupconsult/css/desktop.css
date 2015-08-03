@@ -1,7 +1,31 @@
 @media all and (min-width: 1024px) {
-  #footer .wrapper .footer-block {
-    width: 24.5%; }
-    #footer .wrapper .footer-block .block {
-      padding: 2%; } }
+  #content .wrapper {
+    clear: both;
+    height: auto;
+    border-bottom: none; }
+  #content.one-sidebar #main-content {
+    float: left;
+    max-width: 75%;
+    margin-left: 2%;
+    margin-right: 1%;
+    padding: 2% 0 1% 0; }
+  #content.one-sidebar #sidebar-second {
+    float: right;
+    padding: 2% 1% 15px 0;
+    max-width: 20%;
+    margin: 0; }
+  #content.no-sidebars #main-content {
+    max-width: 95%;
+    margin: auto; }
+
+  #footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    border-top: 1px gray solid; }
+    #footer .wrapper .footer-block {
+      width: 24.5%; }
+      #footer .wrapper .footer-block .block {
+        padding: 2%; } }
 
 /*# sourceMappingURL=desktop.css.map */
