@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_realname_pattern_alter().
+ */
+function listing_name_realname_pattern_alter(&$pattern, $account) {
+    if(in_array('Medical Director', $account->roles)) {
+        // This statement checks to see the user has 'this special role'
+
+        $pattern = '[user:field-last-name], [user:field-first-name], [user:field-credentials].';
+        // you can find a list of all available tokens at example.com/admin/config/people/realname
+        // or just create a new field in the user profile that contains the value you want assign as the RealName
+    }
+}
