@@ -123,7 +123,7 @@
           }
         }
       ?>page-title"><?php print $title; ?></h1><?php endif; ?>
-      <?php if (isset($node)): if($node->type == 'disease_topic'): ?>
+      <?php if (isset($node)): if($node->type == 'disease_topic'): if(!empty($node->field_author)): ?>
       <p class="author" id="primary-author">Primary Author:
       <?php if(!empty($node->field_author['und'][0]['user']->field_url)) {
           print '<a href="http://' . $node->field_author['und'][0]['user']->field_url['und'][0]['safe_value'] . '" target="_blank" class="link">' . $node->field_author['und'][0]['user']->realname . '</a>';
@@ -131,7 +131,7 @@
           print ' ' . $node->field_author['und'][0]['user']->realname;
         }
       ?>
-      </p><?php endif;endif; ?>
+      </p><?php endif; endif; endif; ?>
       <?php if ($tabs): ?>
         <div class="tabs">
           <?php print render($tabs); ?>

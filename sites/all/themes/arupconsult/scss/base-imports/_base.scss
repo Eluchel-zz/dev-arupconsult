@@ -148,40 +148,22 @@ html {
       }
     }
   }
-}
-
-.node-disease-topic {
-  .field-name-field-author {
-    display: none;
-  }
-}
-
-#group-tab-group-node-disease-topic-default {
-  .resp-tabs-list li {
-    background: #eee url(../images/tabs.gif) 0px 0px repeat-x;
-    border: 1px solid #ccc;
-    color: #333;
-    font-weight: bold;
-    height: 20px;
-    padding: 4px 9px 3px 9px;
-    outline: none;
-    text-decoration: none;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-    -moz-border-radius-topright: 5px;
-    -webkit-border-top-right-radius: 5px;
-    &.resp-tab-active {
-      background: #fff;
-      color: #aa1e1e;
-      padding: 4px 9px 3px 9px !important;
-      border-bottom: 2px white solid;
+  &.js {
+    fieldset.collapsed {
+      height: 1.5rem;
     }
   }
 }
 
 #content {
   .wrapper {
-
+    ul {
+      margin: 0px 0px 0px 15px;
+      li {
+        padding: 0px 0px 0px 0px;
+        list-style: disc;
+      }
+    }
   }
   &.two-sidebars {
 
